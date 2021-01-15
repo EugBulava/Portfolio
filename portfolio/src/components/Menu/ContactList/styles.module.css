@@ -1,0 +1,27 @@
+.navigation__contactList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation__contactList li {
+  margin: 10px 0;
+  text-align: center;
+}
+
+.navigation__contactList_blue svg path {
+  fill: #8599ff;
+}
+
+@media only screen and (max-width: 768px) {
+  .navigation__contactList {
+    display: inline;
+    margin-right: 20px;
+    padding-top: 35px;
+  }
+
+  .navigation__contactList li {
+    display: inline;
+    margin: 0 7px;
+  }
+}

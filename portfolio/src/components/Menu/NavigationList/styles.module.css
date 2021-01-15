@@ -1,0 +1,86 @@
+.navigation__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  color: #a5a5a5;
+}
+
+.navigation__list li {
+  text-align: center;
+  height: 30px;
+  margin-top: 30px;
+  cursor: pointer;
+  color: #8599ff;
+  font-size: 18px;
+  line-height: 1;
+  transition-delay: 0.5s;
+}
+
+.navigation__navigationListItem svg {
+  width: 30px;
+}
+
+.navigation__navigationListItem[mouseover = '0'] p {
+  display: none;
+}
+
+.navigation__navigationListItem[mouseover = '1'] svg {
+  display: none;
+}
+
+.link {
+  text-decoration: none;
+  color:  #8599ff;
+}
+
+.blueIcon0 path,
+.blueIcon1 circle, 
+.blueIcon1 path,
+.blueIcon2 circle,  
+.blueIcon3 g g path {
+  fill: #8599ff;
+}
+
+.blueIcon4 path {
+  stroke: #8599ff;
+}
+
+@media only screen and (max-width: 768px) {
+  .navigation__list {
+    padding-top: 35px;
+    margin-bottom: 0;
+    margin-top: 0;
+    display: inline;
+    padding-left: 30px;
+  }
+
+  .navigation__list li {
+    display: inline;
+    margin-left: 10px;
+    margin-right: 10px;
+    align-items: center;
+  }
+
+  .navigation__navigationListItem[mouseover = '1'] p {
+    display: none;
+  }
+
+  .navigation__navigationListItem[mouseover = '1'] svg {
+    display: inline;
+  }
+}
+
+@media only screen and (max-width: 530px) {
+  .navigation__list {
+    transition: 0.5s;
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    top: 100px;
+    width: 100vw;
+    padding: 10px 0 10px 0;
+    background-color: #181818;
+    margin-left: -100vw;
+  }
+}

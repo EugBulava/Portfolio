@@ -1,0 +1,12 @@
+.navigation__mainButton {
+  width: 75px;
+  height: 100px;
+  border: none;
+  outline: none;
+  background-color: #070707;
+  cursor: pointer;
+}
+
+.navigation__mainButton span {
+  color: #ffffff;
+}
