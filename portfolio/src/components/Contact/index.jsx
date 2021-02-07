@@ -56,14 +56,15 @@ const Form = () => {
   const email = useRef(null);
   const subject = useRef(null);
   const message = useRef(null);
+  const form = useRef(null);
 
   const formHandler = () => {
     if(name.current.value.length < 1) {
       name.current.classList.add(styles.invalidInput);
-    }
-
-    if(email.current.value.length < 1) {
+    } else if(email.current.value.length < 1) {
       email.current.classList.add(styles.invalidInput);
+    } else {
+      form.current.submit();
     }
   } 
 
@@ -73,10 +74,10 @@ const Form = () => {
 
   return (
     <div className={styles.form}>
-      <form action="POST" id="contact" className={styles.contactForm}>
+      <form ref={form} action="send.php" method="POST" id="contact" className={styles.contactForm}>
         <div className={`${styles.firstLine} ${styles.line}`}>
-          <input ref={name} onChange={changeHandler} placeholder='Name' className={`${styles.input} ${styles.input_name} ${style()} animate__backInLeft`} type="text"/>
-          <input ref={email} onChange={changeHandler} placeholder='E-mail' className={`${styles.input} ${styles.input_email} ${style()} animate__backInRight`} type="email"/>
+          <input name='name' ref={name} onChange={changeHandler} placeholder='Name' className={`${styles.input} ${styles.input_name} ${style()} animate__backInLeft`} type="text"/>
+          <input name='email' ref={email} onChange={changeHandler} placeholder='E-mail' className={`${styles.input} ${styles.input_email} ${style()} animate__backInRight`} type="email"/>
         </div>
         <div className={`${styles.secondLine} ${styles.line}`}>
           <input ref={subject} onChange={changeHandler} placeholder='Subject' className={`${styles.input} ${styles.input_subject} ${style()} animate__backInDown`} type="text"/>
